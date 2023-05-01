@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStyle="None"
         xmlns:local="clr-namespace:Fractal"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
@@ -20,6 +21,7 @@
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
+            
             <Button 
                     BorderBrush="#FF3C3C3C"
                     Foreground="White" 
@@ -35,6 +37,23 @@
                     </LinearGradientBrush>
                 </Button.Background> Draw
             </Button>
+            
+            <Button 
+                    BorderBrush="#FF3C3C3C"
+                    Foreground="White" 
+                    Padding="0"
+                    
+                    Width="80" Height="20" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top" Click="DrawTriangle" Margin="64,10,0,0"
+                Content="DrawTriangle">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF3E3C3C" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
 
             <Label Width="51" Height="25"  FontSize="9" Margin="0,49,90,726" Content="Delay(mc):" HorizontalAlignment="Right" Foreground="White"/>
             <TextBox x:Name="DelayTextBox" Width="50" Height="20" Margin="0,49,35,731" TextChanged="DelayTextChanged" Text="500" HorizontalAlignment="Right"/>
@@ -43,7 +62,7 @@
         </Grid>
 
 
-        <Grid HorizontalAlignment="Center" Width="650" Grid.Column="1">
+        <Grid HorizontalAlignment="Center" Width="650" Grid.Column="1" Margin="0,0,0,18">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -51,7 +70,7 @@
                 </LinearGradientBrush>
             </Grid.Background>
 
-            <Canvas x:Name="canvas" HorizontalAlignment="Right" Width="650"/>
+            <Canvas x:Name="canvas" HorizontalAlignment="Right" Width="640" Height="790"/>
         </Grid>
 
 
